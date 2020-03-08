@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.41.6",
+    "webpack-merge": "^4.2.2"
+  }
+}
