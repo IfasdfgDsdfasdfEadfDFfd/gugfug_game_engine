@@ -1,5 +1,5 @@
-const awesomeFunc = (): number => {
-  return 0;
+const awesomeFunc = (): boolean => {
+  return true;
 };
 
 

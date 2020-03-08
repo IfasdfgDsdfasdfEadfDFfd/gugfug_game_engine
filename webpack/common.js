@@ -2,12 +2,15 @@ const path = require('path');
 
 // const webpack = require('webpack');
 
+const { globalSettings } = require('./settings');
+
 
 module.exports = {
   entry: path.resolve('src', 'index.ts'),
 
   resolve: {
-    extensions: ['.ts', 'js'],
+    extensions: ['.ts', '.js' ],
+    modules: [ globalSettings.SOURCE_FOLDER, 'node_modules' ],
   },
 
   module: {

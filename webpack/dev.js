@@ -1,9 +1,9 @@
-const path = require('path');
-
 // const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const { CheckerPlugin } = require('awesome-typescript-loader');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const { globalSettings } = require('./settings');
 const commonConfig = require('./common');
 
 
@@ -12,11 +12,16 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
 
   output: {
-    path: path.resolve('dist'),
+    path: globalSettings.DEV_BUILD_FOLDER,
     filename: 'bundle.js',
   },
 
   plugins: [
     new CheckerPlugin(),
+    new HtmlWebpackPlugin(),
   ],
+
+  devServer: {
+    contentBase: globalSettings.DEV_BUILD_FOLDER,
+  },
 });

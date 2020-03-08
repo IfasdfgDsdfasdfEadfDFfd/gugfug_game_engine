@@ -2,6 +2,7 @@
   "scripts": {
     "lint:js": "eslint ./ --fix",
     "build:dev": "webpack --config ./webpack/dev.js",
+    "serve:dev": "webpack-dev-server --config ./webpack/dev.js",
     "cleanup": "rimraf dist",
     "test": ""
   },
@@ -15,6 +16,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   }
 }
