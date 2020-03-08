@@ -3,6 +3,7 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 const { globalSettings } = require('./settings');
 const commonConfig = require('./common');
@@ -22,7 +23,10 @@ module.exports = webpackMerge(commonConfig, {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(globalSettings.SOURCE_FOLDER, 'index.html')
+      template: path.join(globalSettings.SOURCE_FOLDER, 'index.html'),
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async',
     }),
   ],
 
