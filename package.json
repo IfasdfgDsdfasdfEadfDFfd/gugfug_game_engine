@@ -3,10 +3,13 @@
     "lint:js": "eslint ./ --fix",
     "build:dev": "webpack --config ./webpack/dev.js",
     "serve:dev": "webpack-dev-server --config ./webpack/dev.js",
-    "cleanup": "rimraf dist",
+    "cleanup": "rimraf dist pkg",
     "test": ""
   },
   "license": "MIT",
+  "dependencies": {
+    "wasm": "file:./pkg"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "eslint": "^6.8.0",

@@ -1,3 +1,4 @@
+const path = require('path');
 // const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const { CheckerPlugin } = require('awesome-typescript-loader');
@@ -11,6 +12,8 @@ module.exports = webpackMerge(commonConfig, {
   mode: 'development',
   devtool: 'source-map',
 
+  entry: path.join(globalSettings.SOURCE_FOLDER, 'bootstrap.js'),
+
   output: {
     path: globalSettings.DEV_BUILD_FOLDER,
     filename: 'bundle.js',
@@ -18,7 +21,9 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
     new CheckerPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(globalSettings.SOURCE_FOLDER, 'index.html')
+    }),
   ],
 
   devServer: {
