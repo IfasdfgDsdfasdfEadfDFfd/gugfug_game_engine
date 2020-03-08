@@ -4,9 +4,18 @@ const path = require('path');
 
 
 module.exports = {
-  entry: path.resolve('src', 'index.js'),
+  entry: path.resolve('src', 'index.ts'),
 
   resolve: {
     extensions: ['.ts', 'js'],
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: 'awesome-typescript-loader',
+      },
+    ],
   },
 };
