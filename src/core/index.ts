@@ -1,8 +1,3 @@
-const awesomeFunc = (): boolean => {
-  return true;
-};
-
-
 export {
-  awesomeFunc,
-}
+  Scene,
+} from './scene';
