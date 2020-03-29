@@ -1,14 +1,15 @@
 // import { greet } from 'wasm';
-import { Scene } from './core';
 import { Keyboard } from './events/input';
+import { createViewportById } from './core';
 
 
-const canvas = <HTMLCanvasElement>document.getElementById('canvas-id');
-canvas.width = 800
-canvas.height = 600;
-const webGLContext = canvas.getContext('webgl2');
 
-const mainScene = new Scene('main');
+const viewport = createViewportById('canvas-id');
+viewport.resize(window.innerWidth, window.innerHeight);
+
+const mainScene = viewport.createScene('main');
+mainScene.clear([1.0, 1.0, 1.0, 1.0]);
+
 const keyboard = new Keyboard(window);
 
 keyboard.listen('keydown', event => {
@@ -32,6 +33,3 @@ keyboard.listen('keydown', event => {
       break;
   }
 });
-
-mainScene.attachContext(webGLContext);
-mainScene.clear([0.0, 0.0, 0.0, 1.0])

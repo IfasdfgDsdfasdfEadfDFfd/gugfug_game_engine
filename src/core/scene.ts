@@ -3,7 +3,10 @@ type ColorType = [number, number, number, number];
 class Scene {
   private gl: WebGL2RenderingContext;
 
-  constructor(readonly name: string) {
+  constructor(readonly name: string, context?: WebGL2RenderingContext) {
+    if (context) {
+      this.attachContext(context);
+    }
   }
 
   attachContext(context: WebGL2RenderingContext): void {
