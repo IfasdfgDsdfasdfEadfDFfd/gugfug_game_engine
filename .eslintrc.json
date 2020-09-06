@@ -11,7 +11,7 @@
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaScriopt": "2018"
+        "ecmaScript": "2018"
     },
     "rules": {
         "indent": [
