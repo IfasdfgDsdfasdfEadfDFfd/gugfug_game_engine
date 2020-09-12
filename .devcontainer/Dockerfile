@@ -17,3 +17,4 @@ RUN apk update \
     && cargo install cargo-generate \
 
     && curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf >> wasm-init.sh | sh \
+    && rm ./wasm-init.sh
