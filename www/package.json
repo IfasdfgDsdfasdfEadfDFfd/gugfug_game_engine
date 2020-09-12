@@ -1,0 +1,26 @@
+{
+  "name": "gugfug-game-engine-web-ui",
+  "version": "0.0.1",
+  "description": "gugfug-game-engine user web interface",
+  "main": "bootstrap.js",
+  "dependencies": {
+    "gugfug-game-engine": "file:../pkg"
+  },
+  "devDependencies": {
+    "@types/webpack": "^4.41.22",
+    "@types/webpack-env": "^1.15.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^4.4.1",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "author": "gugfug gugfug1@gmail.com",
+  "license": "MIT"
+}
