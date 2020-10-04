@@ -4,7 +4,8 @@
   "description": "gugfug-game-engine user web interface",
   "main": "bootstrap.js",
   "dependencies": {
-    "gugfug-game-engine": "file:../pkg"
+    "gugfug-game-engine": "file:../pkg",
+    "node-forge": "^0.10.0"
   },
   "devDependencies": {
     "@types/webpack": "^4.41.22",
